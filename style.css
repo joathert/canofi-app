@@ -1,0 +1,116 @@
+
+
+
+
+.page {
+
+   /* Page 100% height (*1) */
+   min-height: 30vh;
+
+   /* Horizontal & vertical centering (*2) */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.content {
+
+   /* Extend content... (*3) */
+   width: 100%;
+
+   /* ... but not too much. (*4) */
+   /*max-width: 770px; */
+
+   /* Content background */
+   background: #fff;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+/* Is not centering for some reasom */
+.responsive_hemi {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+
+
+html *
+{
+   font-size: 1.2em 
+   color: #000 !important;
+   font-family: Georgia, Times, serif; !important;
+}
+
+
+ .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+ }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hide-loader{
+display:none;
+}
+
+
+/* Columns */
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+
+.column-picture-left {
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+.column-picture-right {
+  float: right;
+  width: 30%;
+  width: 500px;
+  height: 500px;
+    
+
+}
+
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
