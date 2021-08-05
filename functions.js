@@ -207,7 +207,7 @@ function pyCalcLAI() {
             
             def calc_gap_fractions(im_segment,circ_params):
                 # calculate gap fractions on 89 circles
-                deg2rad = np.pi / 180
+                deg2rad = np.pi/180.0
                 steps = np.arange(360) + 1
                 cx,cy,cr = circ_params
                 circles = np.arange(89) + 1
