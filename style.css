@@ -1,6 +1,9 @@
 
 
-
+/* hide problematic text */
+input[type='file'] {
+  color: transparent;
+}
 
 .page {
 
