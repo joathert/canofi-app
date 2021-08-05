@@ -13,7 +13,7 @@ Canofi (rhymes with butterfly)  is an educational web-app that explores the use 
 
 The current focus of Canofi is on the estimation of the leaf area index (LAI) via a hemispherical reprojection. You can read all about LAI on [wikipedia](https://en.wikipedia.org/wiki/Leaf_area_index) where there is also a decent introduction to [hemispherical photography](https://en.wikipedia.org/wiki/Hemispherical_photography).
 
-The use of panoramas means we can skip the expensive hardware that is usually used when collecting hemispherical imagery. Smartphones work just fine especially with the Google Street View app. See [here for more details] (https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full).
+The use of panoramas means we can skip the expensive hardware that is usually used when collecting hemispherical imagery. Smartphone panoramas work just fine, especially when collected with the Google Street View app. For more info, see [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full).
 
 Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. 
 
