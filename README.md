@@ -6,7 +6,7 @@ https://www.cano.fi
 
 # canofi-app
 
-Canofi is powered by [Pyodide](https://pyodide.org/en/stable/). Pyodide runs the scientific python stack within the browser. 
+Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which let's us run the scientific python stack within the browser. 
 
 # some details on the algorithms
 The image loading is complicated by the fact that the browser python (pyodide) code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution.  This convoluted step is not neccessary using standard python, so use that for important research.  
