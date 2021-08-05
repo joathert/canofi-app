@@ -1,3 +1,5 @@
+https://joathert.github.io/canofi-app/
+
 # canofi-app
 Canofi: convert 360 panoramas to hemispherical imagery for plant science applications
 
