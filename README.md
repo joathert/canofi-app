@@ -3,18 +3,17 @@
 ![Alt text](attributes/corrected_banner.jpg?raw=true "Canofi")
 
 
-
 https://joathert.github.io/canofi-app/
 
 https://www.cano.fi
 
 # canofi-app
 
-_Canofi_ (where fi rhymes with fly)  is an educational web-app, that explores the use of panoramic imagery for plant science applications. 
+Canofi (where fi rhymes with fly)  is an educational web-app, that explores the use of panoramic imagery for plant science applications. 
 
-The current focus of _Canofi_ is on the estimation of the leaf area index (LAI) via a hemispherical reprojection. You can read all about LAI on [wikipedia](https://en.wikipedia.org/wiki/Leaf_area_index) where there is also a decent introduction to [hemispherical photography](https://en.wikipedia.org/wiki/Hemispherical_photography).
+The current focus of Canofi is on the estimation of the leaf area index (LAI) via a hemispherical reprojection. You can read all about LAI on [wikipedia](https://en.wikipedia.org/wiki/Leaf_area_index) where there is also a decent introduction to [hemispherical photography](https://en.wikipedia.org/wiki/Hemispherical_photography).
 
-_Canofi_ is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. 
+Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. 
 
 # algorithms and issues
 The image loading is complicated by the fact that the browser python (pyodide) code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution.  This convoluted step is not neccessary using standard python, so use that for important research.  
