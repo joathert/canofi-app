@@ -24,7 +24,7 @@
     <div class="page" id="page-1">
       
       <div class="content">
-	<p style="font-size: 40px; font-weight: bold;">Canofi: convert 360 panoramas to hemispherical imagery for plant science applications </p>
+	<p style="font-size: 30px; font-weight: bold;">Canofi: convert 360 panoramas to hemispherical imagery for plant science applications </p>
 
 	<img id='banner' src="attributes/corrected_banner.jpg" class="responsive" />
 
@@ -33,27 +33,27 @@
 
     <div style="background-color:#ccc; font-size: 35px;">  
 
-         <p style="font-size: 30px;" >
+         <p style="font-size: 20px;" >
 	  How to <i> Canofi </i> your imagery:
        </p> 
 
       
-       <ol style="font-size: 30px;"  >
+       <ol style="font-size: 20px;"  >
 	 <li> Shoot a full 360 degree panorama photo under a tree canopy & save it to your phone/desktop. <a href="https://www.google.com/streetview/">Google Street View</a>  works well for this. </li>
-	 <li>  Wait for modules to load, then choose the photo file and
+	 <li>  Wait for modules to load, then choose the panorama file and
 	   click "Reproject image". After that, click the "Estimate
 	   LAI" button below the output image to calculate the leaf area index (LAI).     </li>
        </ol> 
 	    
 
-       <p style="font-size: 30px;" >
+       <p style="font-size: 20px;" >
 	 For more info see the bottom of the page and <a href="https://www.cano.fi">Canofi project homepage</a>
        </p>    
     </div>	
       
     
 
-    <div style="background-color:lightblue; font-size: 35px;">  
+    <div style="background-color:lightblue; font-size: 20px;">  
     
       
 	<p class="titles">Canofi status </p>
@@ -68,9 +68,11 @@
     <div style="background-color:#ccc;">
     <div class="row">	
 
-        <span style="display:block; height: 50px;"></span>
+        <span style="display:block; height: 20px;"></span>
+	<p style="font-size: 30px; font-weight: bold;">Choose an image for
+      reprojection using the button below</p> 
       
-	<input type="file" id="imageLoader" name="imageLoader" style="font-size : 40px; border-radius: 15px; width: 90%;" />
+	<input type="file" id="imageLoader" name="imageLoader" style="font-size : 30px; border-radius: 15px; width: 90%;" />
 	
 	<canvas id="imageCanvas"  width="2000" height="1000"  </canvas>
 		
@@ -98,12 +100,12 @@
 
     <div class="row">
 
-        
+      
 	<div id="image_data" b64="empty"></div>
 
         <br>	  <br> 
 	
-	<button  type=button style="font-size : 40px; border-radius: 15px; width: 60%;" onclick='pyProcessImage()'>Reproject image (have patience!)</button>
+	<button  type=button style="font-size : 30px; border-radius: 15px; width: 60%;" onclick='pyProcessImage()'>Reproject image (have patience!)</button>
 
 	<br> <br>
 	<br> <br>
@@ -113,14 +115,14 @@
 	<br>
       
 	<br>
-	<a href="#"  onclick="prepHref(this)" style="font-size : 40px;"  download='canofi-hemi.png'>Click here to download hemispherical image  </a>	
+	<a href="#"  onclick="prepHref(this)" style="font-size : 30px;"  download='canofi-hemi.png'>Click here to download hemispherical image  </a>	
       </div>
       
     <div class="row">
 
       <br> <br>
       
-      <button  type=button style="font-size : 40px; border-radius: 15px; width: 30%;" onclick='pyCalcLAI()'> Estimate LAI</button>
+      <button  type=button style="font-size : 20px; border-radius: 15px; width: 30%;" onclick='pyCalcLAI()'> Estimate LAI</button>
 
     </div>
 
@@ -128,29 +130,29 @@
 
       <div class="column">
       <br>
-      <label for="threshold" style="font-size : 35px; border-radius: 15px; width: 15%;"  >LAI threshold (0-1):</label>
+      <label for="threshold" style="font-size : 20px; border-radius: 15px; width: 15%;"  >LAI threshold (0-1):</label>
       
        <input type="number" id="threshold" name="threshold" 
-	      min="0" max="1" value="0.5" step="0.05" style="font-size : 35px; border-radius: 10px; width: 18%;" >
+	      min="0" max="1" value="0.5" step="0.05" style="font-size : 20px; border-radius: 10px; width: 18%;" >
 
       </div>
 
       <div class="column">
-      <label for="checkbox" style="font-size : 35px; border-radius: 15px; width: 15%; vertical-align: middle;"  >  show threshold image?   </label>
-      <input type="checkbox" id="checkbox" onclick="switchImage()" style="width : 35px; height: 50px;  vertical-align: middle;   padding: 10;
+      <label for="checkbox" style="font-size : 20px; border-radius: 15px; width: 15%; vertical-align: middle;"  >  show threshold image?   </label>
+      <input type="checkbox" id="checkbox" onclick="switchImage()" style="width : 20px; height: 50px;  vertical-align: middle;   padding: 10;
 " >
 
       </div>
       
     </div>  
 
-    <p id="lai_output" style="font-size : 35px;" > LAI output: LAI not yet estimated </p> 
+    <p id="lai_output" style="font-size : 20px;" > LAI output: LAI not yet estimated </p> 
     
     </div>
       
     </div>
 
-	<div style="background-color:lightblue; font-size: 35px;">
+	<div style="background-color:lightblue; font-size: 20px;">
 	  
 	   <ul>	     
            
