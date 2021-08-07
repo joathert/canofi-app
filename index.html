@@ -2,188 +2,174 @@
 <html>
   <head>
     <meta charset="utf-8">
-     
-    <link rel="stylesheet" href="style.css">
-    
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
-    
-     <script type= "text/javascript" src="functions.js" ></script>
-
-    <style>
-      p.titles {
-      font-size: 30px;
-      }
-      
-    </style>
-   
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js"></script>
+    <script type= "text/javascript" src="functions.js" ></script>
   </head>
 
- 
+  <style>
+     /* spinny loader */
+     .loader {
+     border: 16px solid #f3f3f3; /* Light grey */
+     border-top: 16px solid #A9A9A9; /* Blue */
+     border-radius: 50%;
+     width: 120px;
+     height: 120px;
+     animation: spin 2s linear infinite;
+     }
+     @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+     }
+     .hide-loader{
+     display:none;
+     }
+
+     /* hide problematic text */
+     input[type='file'] {
+     color: transparent;
+     }
+  </style> 
+     
   <body>
     
-    <div class="page" id="page-1">
+    <div >
+
+      <h1>Canofi: convert 360 panoramas to hemispherical imagery for plant science applications </h1> 
       
-      <div class="content">
-	<p style="font-size: 30px; font-weight: bold;">Canofi: convert 360 panoramas to hemispherical imagery for plant science applications </p>
-
-	<img id='banner' src="attributes/corrected_banner.jpg" class="responsive" />
-
-      </div>
+      <img id='banner' src="attributes/corrected_banner.jpg"  />
     </div>
 
-    <div style="background-color:#ccc; font-size: 35px;">  
-
-         <p style="font-size: 20px;" >
-	  How to <i> Canofi </i> your imagery:
-       </p> 
-
-      
-       <ol style="font-size: 20px;"  >
-	 <li> Shoot a full 360 degree panorama photo under a tree canopy & save it to your phone/desktop. <a href="https://www.google.com/streetview/">Google Street View</a>  works well for this. </li>
-	 <li>  Wait for modules to load, then choose the panorama file and
-	   click "Reproject image". After that, click the "Estimate
-	   LAI" button below the output image to calculate the leaf area index (LAI).     </li>
+    
+    <div >  
+      <h2>How to <i> Canofi </i> your imagery:</h2> 
+      <ol>
+	<li> Shoot a full 360 degree panorama photo under a tree
+	  canopy & save it to your phone/desktop.
+	  <a href="https://www.google.com/streetview/">Google Street
+	  View</a> works well for this. </li>
+	 <li> Wait for modules to load, then choose the panorama file
+	   and click "Reproject image". After that, click the
+	   "Estimate LAI" button below the output image to calculate
+	   the leaf area index (LAI).  </li>
        </ol> 
 	    
-
-       <p style="font-size: 20px;" >
-	 For more info see the bottom of the page or the <a href="https://www.cano.fi">Canofi project homepage</a><br>
-
+       <p>For more info see the bottom of the page or
+       the <a href="https://www.cano.fi">Canofi project
+       homepage</a><br>
        </p>    
     </div>	
-      
-    
 
-    <div style="background-color:lightblue; font-size: 20px;">  
-    
-      
-	<p class="titles">Canofi status </p>
+    <div>  
+	<h2> Canofi status </h2>
 	<h3 id="loadtxt"  ></h3>
 	<div id="load"> </div>
-
-    <span style="display:block; height: 25px;"></span>	
     </div>
-
-    <span style="display:block; height: 15px;"></span>
     
-    <div style="background-color:#ccc;">
-    <div class="row">	
-
-        <span style="display:block; height: 20px;"></span>
-	<p style="font-size: 30px; font-weight: bold;">Choose an image for
-      reprojection using the button below</p> 
+    <div >
+      <h2>Choose an image for reprojection using the button below</h2> 
       
-	<input type="file" id="imageLoader" name="imageLoader" style="font-size : 30px; border-radius: 15px; width: 90%;" />
+      <input type="file" id="imageLoader" name="imageLoader"/>
 	
-	<canvas id="imageCanvas"  width="2000" height="1000"  </canvas>
-		
-	 <script>
+      <canvas id="imageCanvas"  width="2000" height="1000"  </canvas>
 
-	   var imageLoader = document.getElementById('imageLoader');
-	   imageLoader.addEventListener('change', handleImage, false);
-	   var canvas = document.getElementById('imageCanvas');
-	   var ctx = canvas.getContext('2d');
-           ctx.canvas.hidden = true; // hide the large canvas, then show smaller version
+      <script>
+	var imageLoader = document.getElementById('imageLoader');
+	imageLoader.addEventListener('change', handleImage, false);
+	var canvas = document.getElementById('imageCanvas');
+	var ctx = canvas.getContext('2d');
+        ctx.canvas.hidden = true; // hide the large canvas, then show smaller version
+      </script>
 
+      <img id="output" src="attributes/Test_im_blur.png"
+	   width="750" height="375" class="center"/>
 
-	 </script>
-
-    </div>
-
-    <br>
-    <br>
-
-   <img id="output" src="attributes/Test_im_blur.png" width="750" height="375" class="center"/>
-
-    <script>
-      main_as();
-    </script>    
-
-    <div class="row">
-
-      
-	<div id="image_data" b64="empty"></div>
-
-        <br>	  <br> 
-	
-	<button  type=button style="font-size : 30px; border-radius: 15px; width: 60%;" onclick='pyProcessImage()'>Reproject image (have patience!)</button>
-
-	<br> <br>
-	<br> <br>
-	
-	<img id="fig" src="attributes/Test_out.png" width="750" height="750" >
-	
-	<br>
-      
-	<br>
-	<a href="#"  onclick="prepHref(this)" style="font-size : 30px;"  download='canofi-hemi.png'>Click here to download hemispherical image  </a>	
-      </div>
-      
-    <div class="row">
-
-      <br> <br>
-      
-      <button  type=button style="font-size : 20px; border-radius: 15px; width: 30%;" onclick='pyCalcLAI()'> Estimate LAI</button>
-
-    </div>
-
-    <div class="row">
-
-      <div class="column">
-      <br>
-      <label for="threshold" style="font-size : 20px; border-radius: 15px; width: 15%;"  >LAI threshold (0-1):</label>
-      
-       <input type="number" id="threshold" name="threshold" 
-	      min="0" max="1" value="0.5" step="0.05" style="font-size : 20px; border-radius: 10px; width: 18%;" >
-
-      </div>
-
-      <div class="column">
-      <label for="checkbox" style="font-size : 20px; border-radius: 15px; width: 15%; vertical-align: middle;"  >  show threshold image?   </label>
-      <input type="checkbox" id="checkbox" onclick="switchImage()" style="width : 20px; height: 50px;  vertical-align: middle;   padding: 10;
-" >
-
-      </div>
-      
+      <br> 
+          
     </div>  
 
-    <p id="lai_output" style="font-size : 20px;" > LAI output: LAI not yet estimated </p> 
-    
-    </div>
+    <script>
+	main_as();
+    </script>
+
+    <div>
+      <div id="image_data" b64="empty"></div>
+            
+      <button  type=button onclick='pyProcessImage()'>Reproject image
+	(have patience!)</button>
+
+      <img id="fig" src="attributes/Test_out.png" width="750" height="750" >
+
+      <br>
+      
+      <a href="#"  onclick="prepHref(this)"
+	 download='canofi-hemi.png'>Click here to download
+	hemispherical image  </a>
       
     </div>
 
-	<div style="background-color:lightblue; font-size: 18px;">
-	  
-	   <ul>	     
-           
-	     <li>   If you encounter a "Processing error:" then refresh
-	       the page and wait for the modules to load before retrying. </li>
+    
+    <div>
+      <button type=button onclick='pyCalcLAI()'> Estimate LAI</button>
+
+      <label for="threshold"  >LAI threshold (0-1):</label>
+      <input type="number" id="threshold" name="threshold" 
+	      min="0" max="1" value="0.5" step="0.05"  >
+    </div>
+
+    <div>
+      <label for="checkbox"  >show threshold image?   </label>
+      <input type="checkbox" id="checkbox" onclick="switchImage()" >
+    
+      <p id="lai_output">LAI output: LAI not yet estimated </p> 
+    
+    </div>
+      
+    <div>
+      <h2>A few more details</h2> 
+      <ul>	     
+	<li> If you encounter a "Processing error:" then refresh
+	the page and wait for the modules to load before retrying. </li>
  
-	     <li>Canofi works best in Chrome. In FireFox desktop, if the page is refreshed 2-3 times the app might run out of memory. If this happens close the browser completely and start again.  </li>
+	<li>Canofi works best in Chrome. In FireFox desktop, if the
+	page is refreshed 2-3 times the app might run out of memory.
+	If this happens close the browser completely and start again. </li>
 
-	     <li> We have had mixed success with mobile, switch to Chrome desktop if you have issues. </li>
+	<li> We have had mixed success with mobile, switch to Chrome
+	desktop if you have issues. </li>
 
-	     <li>
-	       On mobile the image may download as a <q>document</q> file with no file ending. In that case, locate the file and rename it to <q>hemi.png </q> and your phone should show it as an image.   
-
-	       </li>
+	<li>On mobile the image may download as a <q>document</q> file
+	with no file ending. In that case, locate the file and rename
+	it to <q>hemi.png </q> and your phone should show it as an
+	image. </li>
 		   
-	     <li> Canofi is an educational tool. Please do not use Canofi for critical research as image quality is degraded and accuracy cannot be guaranteed. </a> </li>
+	<li> Canofi is an educational tool. Please do not use Canofi
+	for critical research as image quality is degraded and
+	accuracy cannot be guaranteed. </a> </li>
                
-	     <li> The LAI algorithm is a port of <a href="https://github.com/naturalis/Hemiphot"> Hemiphot.R </a>. <br>[Hans ter Steege (2018). Hemiphot.R: Free R scripts to analyse hemispherical photographs for canopy openness, leaf area index and photosynthetic active radiation under forest canopies. Unpublished report. Naturalis Biodiversity Center, Leiden, The Netherlands].  </li>
+	<li> The LAI algorithm is a port
+	of <a href="https://github.com/naturalis/Hemiphot">
+	Hemiphot.R </a>. <br>[Hans ter Steege (2018). Hemiphot.R: Free
+	R scripts to analyse hemispherical photographs for canopy
+	openness, leaf area index and photosynthetic active radiation
+	under forest canopies. Unpublished report. Naturalis
+	Biodiversity Center, Leiden, The Netherlands].  </li>
 
-             <li> Note that the LAI is also an approximate value, and should be treated with caution. The LAI shown here is uncorrected for woody area or clumping and is sometimes known as the plant area index (PAI). </li>
+        <li> Note that the LAI is also an approximate value, and
+        should be treated with caution. The LAI shown here is
+        uncorrected for woody area or clumping and is sometimes known
+        as the plant area index (PAI). </li>
 
-               <li> Everything takes place in the browser using the magic of <a href="https://github.com/pyodide/pyodide">Pyodide</a>. </li>
+        <li> Everything takes place in the browser using the magic
+        of <a href="https://github.com/pyodide/pyodide">Pyodide</a>. </li>
 	      
-             <li> Canofi was supported by the <a href="https://spps.se/" >Scandanavian Plant Physiology Society</a> </li>
+        <li> Canofi was supported by the <a href="https://spps.se/"
+        >Scandanavian Plant Physiology Society</a> </li>
 
-	     <li> Send feedback and suggestions to <a href="mailto:info@cano.fi">info@cano.fi</a>   </li>
+	<li> Send feedback and suggestions
+	to <a href="mailto:info@cano.fi">info@cano.fi</a> </li>
 
-
-	  </ul>
-         </div>
+      </ul>
+   </div>
        
   </body>
 </html>
