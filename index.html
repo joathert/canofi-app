@@ -6,6 +6,8 @@
     <script type= "text/javascript" src="functions.js" ></script>
   </head>
 
+  <link rel="stylesheet" href="sakura.css" type="text/css">
+
   <style>
      /* spinny loader */
      .loader {
@@ -24,10 +26,6 @@
      display:none;
      }
 
-     /* hide problematic text */
-     input[type='file'] {
-     color: transparent;
-     }
   </style> 
      
   <body>
@@ -59,17 +57,19 @@
        </p>    
     </div>	
 
-    <div>  
+    <div style="border-style: dotted;">  
 	<h2> Canofi status </h2>
 	<h3 id="loadtxt"  ></h3>
 	<div id="load"> </div>
     </div>
+
+    <span style="display:block; height: 25px;"></span>	
     
-    <div >
-      <h2>Choose an image for reprojection using the button below</h2> 
+    <div>
+
       
-      <input type="file" id="imageLoader" name="imageLoader"/>
-	
+      <input type="file" id="imageLoader" name="imageLoader" />
+        
       <canvas id="imageCanvas"  width="2000" height="1000"  </canvas>
 
       <script>
@@ -80,23 +80,28 @@
         ctx.canvas.hidden = true; // hide the large canvas, then show smaller version
       </script>
 
-      <img id="output" src="attributes/Test_im_blur.png"
-	   width="750" height="375" class="center"/>
-
       <br> 
-          
+
+      <script>
+	main_as();
+      </script>  
     </div>  
 
-    <script>
-	main_as();
-    </script>
+    <span style="display:block; height: 25px;"></span>	
 
     <div>
-      <div id="image_data" b64="empty"></div>
-            
-      <button  type=button onclick='pyProcessImage()'>Reproject image
-	(have patience!)</button>
+      <img id="output" src="attributes/Test_im_blur.png" width="750" height="375">
+    </div>    
 
+    <div >
+      <div id="image_data" b64="empty"></div>
+      <button  type=button onclick='pyProcessImage()'>Click here to reproject image
+	(have patience!)</button>
+    </div>    
+
+    <span style="display:block; height: 25px;"></span>	
+
+    <div>
       <img id="fig" src="attributes/Test_out.png" width="750" height="750" >
 
       <br>
@@ -104,19 +109,18 @@
       <a href="#"  onclick="prepHref(this)"
 	 download='canofi-hemi.png'>Click here to download
 	hemispherical image  </a>
-      
+
+      <span style="display:block; height: 25px;"></span>
     </div>
 
     
-    <div>
+    <div style="border-style: dotted;" >
       <button type=button onclick='pyCalcLAI()'> Estimate LAI</button>
 
       <label for="threshold"  >LAI threshold (0-1):</label>
       <input type="number" id="threshold" name="threshold" 
 	      min="0" max="1" value="0.5" step="0.05"  >
-    </div>
 
-    <div>
       <label for="checkbox"  >show threshold image?   </label>
       <input type="checkbox" id="checkbox" onclick="switchImage()" >
     
