@@ -2,8 +2,7 @@
 
 ![Alt text](attributes/corrected_banner.jpg?raw=true "Canofi")
 
-
-https://joathert.github.io/canofi-app/
+https://app.cano.fi/
 
 https://www.cano.fi
 
