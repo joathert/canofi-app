@@ -21,8 +21,8 @@ Canofi performs 2 main steps:
 2. LAI estimation.
 
 Both steps should be checked for accuracy versus reference algorithms. This testing is only for validation of the algorithms used in Canofi versus
-offline reference implementations. It does not test the validty of the (abstract) method
-versus fisheye hardware, there are publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full)).
+offline reference implementations. It does not test the validty of the complete method
+versus fisheye hardware, there are recent publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full)).
 
 Note that the reprojection step can be achieved with a whole bunch of different software including the Gimp, 
 ImageMagick, or a Scipy (interpolate.griddata) method used in Haozhou Wang’s thesis, which you can find [here](https://github.com/HowcanoeWang/Spherical2TreeAttributes). During early testing, Wang's method appeared to produce somewhat smoother imagery than the method used here, at the expense of processing time and memory.
