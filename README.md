@@ -31,7 +31,6 @@ To check for errors, LAI output was compared from 3 different _projection-LAI es
 2. Canofi Skimage Reprojection -> Canofi LAI      (blue points on graph)
 3. Canofi Skimage Reprojection -> Hemiphot.R LAI  (red points on graph, obscured by blue points) 
 
-The results are shown below:
 ![Alt text](attributes/output_fig.png?raw=true "Canofi")
 
 Note that data-sets 2 and 3 overlie each other, but both are plotted. This means that Canofi LAI method is comparable (though not exactly equivalent) to Hemiphot.R implementation. 
