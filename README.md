@@ -44,6 +44,8 @@ At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang
 The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution. This artifically inflates the LAI value a little. Further, this convoluted step is not neccessary using standard python that you might want to run on a desktop.
 
 ## References
+A. Z. Andis Arietta (2020) Evaluation of hemispherical photos extracted from smartphone spherical panorama images to estimate canopy structure and forest light environment bioRxiv 2020.12.15.422956; doi: https://doi.org/10.1101/2020.12.15.422956
+
 Haozhou WANG, (2019), ESTIMATING FOREST ATTRIBUTES FROM SPHERICAL IMAGES, University of New Brunswick
 
 Hans ter Steege (2018). Hemiphot.R: Free R scripts to analyse hemispherical photographs for canopy openness, leaf area index and photosynthetic active radiation under forest canopies. Unpublished report. Naturalis Biodiversity Center, Leiden, The Netherlands 
