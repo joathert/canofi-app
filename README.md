@@ -16,7 +16,7 @@ The use of panoramas means we can skip the expensive hardware that is usually us
 Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. 
 
 ## Accuracy of algorithms
-Canofi performs 2 different main steps: 
+Canofi performs 2 main steps: 
 1. Reprojection from panorama to fish-eye. 
 2. LAI estimation.
 
