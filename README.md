@@ -36,7 +36,7 @@ To check for errors, LAI output was compared from 3 different _projection-LAI es
 
 Note that data-sets 2 and 3 overlie each other, but both are plotted. This means that Canofi LAI method is comparable (though not exactly equivalent) to Hemiphot.R implementation. 
 
-At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang's Scipy Reprojection -> Hemiphot.R LAI_. This means that the skimage reprojection gives different results to the reference algorithm. This chimes with our previous experience of less smooth imagery on visual inspection. Based on our casual observations it is likely that Wang's method is more accurate, but this is an issue that needs further investigation. For this reason, **please do not use Canofi for critical research** where maaximum accuracy is required. You should investigate the various reprojection algorithms for that.     
+At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang's Scipy Reprojection -> Hemiphot.R LAI_. This means that the skimage reprojection gives different results to the reference algorithm. This chimes with our previous experience of less smooth imagery on visual inspection. Based on our casual observations it is likely that Wang's method is more accurate, but this is an issue that needs further investigation. For this reason, **please do not yet use Canofi for critical research** where maximum accuracy is required. You should investigate the various reprojection algorithms for that.     
 
 
 ## More issues  
