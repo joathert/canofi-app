@@ -28,14 +28,14 @@ ImageMagick, or a Scipy (interpolate.griddata) method used in Haozhou Wang’s t
 
 To check for errors, LAI output was compared from 3 different _projection-LAI estimation_ pairs for 3 different panoramas and 4 differing threshold values:
 1. Wang's Scipy Reprojection -> Hemiphot.R LAI   (This is the X-axis on below graph)
-2. Canofi Skimage Reprojection -> Canofi LAI      (blue points on graph)
-3. Canofi Skimage Reprojection -> Hemiphot.R LAI  (red points on graph, obscured by blue points) 
+2. Canofi skimage Reprojection -> Canofi LAI      (blue points on graph)
+3. Canofi skimage Reprojection -> Hemiphot.R LAI  (red points on graph, obscured by blue points) 
 
 ![Alt text](attributes/output_fig.png?raw=true "Canofi")
 
 Note that data-sets 2 and 3 overlie each other, but both are plotted. This means that Canofi LAI method is comparable (though not exactly equivalent) to Hemiphot.R implementation. 
 
-At High LAI, both 2 and 3 diverge from the reference values. This means that the skimage reprojection gives different results to the reference algorithm. This chimes with our previous experience. Based on our casual observations it is likely that Wang's method is more accurate, but this is an issue that needs further investigation. For this reason, **please do not use Canofi for critical research**!     
+At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang's Scipy Reprojection -> Hemiphot.R LAI_. This means that the skimage reprojection gives different results to the reference algorithm. This chimes with our previous experience. Based on our casual observations it is likely that Wang's method is more accurate, but this is an issue that needs further investigation. For this reason, **please do not use Canofi for critical research**!     
 
 
 ## More issues  
