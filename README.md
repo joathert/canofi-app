@@ -20,7 +20,7 @@ Canofi performs 2 main steps:
 1. Reprojection from panorama to fish-eye. 
 2. LAI estimation.
 
-Both steps should be checked for accuracy versus reference algorithms. This testing is only for validation of the algorithms used in Canofi versus
+Both steps were checked for accuracy versus reference algorithms. This testing is only for validation of the algorithms used in Canofi versus
 offline reference implementations. It does not test the validty of the complete method
 versus fisheye hardware, there are recent publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full)).
 
