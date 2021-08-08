@@ -23,7 +23,7 @@ Canofi performs 2 main steps:
 2. LAI estimation.
 
 Both steps were checked for accuracy versus reference algorithms. This testing is only for validation of the algorithms used in Canofi versus
-offline reference implementations. It does not test the validty of the complete method
+offline reference implementations. It does not test the validty of the reporjection method
 versus fisheye hardware, there are recent publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full)).
 
 Note that the reprojection step can be achieved with a whole bunch of different software including the Gimp, 
