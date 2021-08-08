@@ -22,6 +22,9 @@ ImageMagick, or even Scipy (interpolate.griddata). The Scipy method was used in 
 
 The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution.  This convoluted step is not neccessary using standard python, so use that for important research.  
 
+## Testing of algorithms
+GRAPH HERE OF XY PLOT, WITH SHORT DESCRIPTION OF METHOD
+
 ## Attribution
 The LAI algorithm is a port of [Hemiphot.R](https://github.com/naturalis/Hemiphot):
 
