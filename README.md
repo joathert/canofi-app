@@ -29,7 +29,7 @@ versus fisheye hardware, there are recent publications on that (e.g. [here](http
 Note that the reprojection step can be achieved with a whole bunch of different software including the Gimp, 
 ImageMagick, or a Scipy (interpolate.griddata) method used in Haozhou Wang’s thesis, which you can find [here](https://github.com/HowcanoeWang/Spherical2TreeAttributes). We use that as our reference reprojection code. As our LAI method was a line-by-line port of [Hemiphot.R](https://github.com/naturalis/Hemiphot), then we will use the R code as our reference LAI implementation.
 
-To check for errors, LAI output was compared from 3 different _projection-LAI estimation_ pairs for 3 different panoramas and 4 differing threshold values:
+To check for errors, LAI output was compared from 3 different _Reprojection-LAI estimation_ pairs for 3 different panoramas and 4 differing threshold values:
 1. Wang's Scipy Reprojection -> Hemiphot.R LAI   (This is the X-axis on below graph)
 2. Canofi skimage Reprojection -> Canofi LAI      (blue points on graph)
 3. Canofi skimage Reprojection -> Hemiphot.R LAI  (red points on graph, obscured by blue points) 
