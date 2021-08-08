@@ -19,7 +19,7 @@ Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), wh
 
 ## Accuracy of algorithms
 Canofi performs 2 main steps: 
-1. Reprojection from panorama to fish-eye. 
+1. reprojection from panorama to fish-eye. 
 2. LAI estimation.
 
 Both steps were checked for accuracy versus reference algorithms. This testing is only for validation of the algorithms used in Canofi versus
