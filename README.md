@@ -25,7 +25,7 @@ The browser image loading is complicated by the fact that the embedded python co
 ## Testing of algorithms
 This testing is only for validation of the algorithms used in Canofi versus
 offline reference implementations. It does not test the validty of the method
-versus fisheye hardware, there are publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full).
+versus fisheye hardware, there are publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full)).
 
 GRAPH HERE OF XY PLOT, WITH SHORT DESCRIPTION OF METHOD
 
