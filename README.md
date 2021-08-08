@@ -41,7 +41,7 @@ Note that data-sets 2 and 3 overlie each other, but both are plotted. This means
 At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang's Scipy Reprojection -> Hemiphot.R LAI_. This means that the skimage reprojection gives different results to the reference algorithm. Some of this decrease is accounted for by the lower resolution of the web image (see **More issues** below), but some of it is also due to differences in the interpolation codes themselves. Further work is needed to ascertain which re-projection method is most accurate. For this reason, **please do not (yet) use Canofi for important research** where maximum reprojection accuracy is required. 
 
 ## More issues  
-The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution.  This convoluted step is not neccessary using standard python that might run on a desktop.
+The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution. This artifically inflates the LAI value a little. Further, this convoluted step is not neccessary using standard python that you might want to run on a desktop.
 
 ## References
 Haozhou WANG, (2019), ESTIMATING FOREST ATTRIBUTES FROM SPHERICAL IMAGES, University of New Brunswick
