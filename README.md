@@ -25,7 +25,7 @@ offline reference implementations. It does not test the validty of the complete 
 versus fisheye hardware, there are recent publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full)).
 
 Note that the reprojection step can be achieved with a whole bunch of different software including the Gimp, 
-ImageMagick, or a Scipy (interpolate.griddata) method used in Haozhou Wang’s thesis, which you can find [here](https://github.com/HowcanoeWang/Spherical2TreeAttributes). During early testing, Wang's method appeared to produce somewhat smoother imagery than the method used here, at the expense of processing time and memory.
+ImageMagick, or a Scipy (interpolate.griddata) method used in Haozhou Wang’s thesis, which you can find [here](https://github.com/HowcanoeWang/Spherical2TreeAttributes). During early testing, Wang's method appeared to produce somewhat smoother imagery than the method used here, at the expense of processing time and memory. We use that as our reference reprojection code. As our LAI method was a line-by-line port of Hemiphot.R, then we will use the R code as our reference LAI implementation.
 
 To check for errors, LAI output was compared from 3 different _projection-LAI estimation_ pairs for 3 different panoramas and 4 differing threshold values:
 1. Wang's Scipy Reprojection -> Hemiphot.R LAI   (This is the X-axis on below graph)
