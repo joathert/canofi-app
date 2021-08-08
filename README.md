@@ -6,6 +6,8 @@ https://app.cano.fi/
 
 https://www.cano.fi
 
+info@cano.fi
+
 ## Canofi-app
 Canofi (rhymes with butterfly)  is an educational web-app that explores the use of panoramic imagery for plant science applications. 
 
