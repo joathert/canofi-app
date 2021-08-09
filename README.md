@@ -54,7 +54,7 @@ Haozhou WANG, (2019), ESTIMATING FOREST ATTRIBUTES FROM SPHERICAL IMAGES, Univer
 
 Hans ter Steege (2018). Hemiphot.R: Free R scripts to analyse hemispherical photographs for canopy openness, leaf area index and photosynthetic active radiation under forest canopies. Unpublished report. Naturalis Biodiversity Center, Leiden, The Netherlands 
 
-The reprojection was helped along with this blog post:
-http://www.richwareham.com/little-planet-projection/).
+The reprojection code was helped along with this blog post:
+http://www.richwareham.com/little-planet-projection/.
 
 
