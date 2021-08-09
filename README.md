@@ -11,7 +11,7 @@ https://www.cano.fi
 info@cano.fi
 
 ## Canofi-app
-Canofi (rhymes with butterfly)  is an educational web-app that applies panoramic imagery to field ecology. 
+Canofi (rhymes with butterfly)  is an educational web-app that uses panoramic imagery to characterise plant canopy structure. 
 
 Canofi's focus is on the estimation of the leaf area index (LAI) via a hemispherical fish-eye type reprojection of input panorama data. You can read all about LAI on [wikipedia](https://en.wikipedia.org/wiki/Leaf_area_index) where there is also a decent introduction to [hemispherical photography](https://en.wikipedia.org/wiki/Hemispherical_photography).
 
