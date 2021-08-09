@@ -17,6 +17,9 @@ The use of panoramas means we can skip the expensive hardware that is usually us
 
 Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which runs the scientific python stack within the browser. The python code used for the reprojection and LAI calculation is embedded in the functions.js file [here](functions.js#L51) and [here](functions.js#L176), and can be extracted (minus the convoluted browser image i/o) to run offline as a normal script.
 
+Canofi DOI: 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5171971.svg)](https://doi.org/10.5281/zenodo.5171971)
+
 ## Accuracy of algorithms
 Canofi performs 2 main steps: 
 1. reprojection from panorama to fish-eye. 
