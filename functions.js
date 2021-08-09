@@ -101,7 +101,7 @@ function pyProcessImage() {
         max_x, max_y = input_shape[1]-1, input_shape[0]-1
         xs = theta * max_x
         ys = r * max_y # First change here
-        return np.hstack((xs, ys))
+        return np.vstack((xs, ys)).T
 
     def inverse_map(fisheye_xy):
         polar = fisheye_in_polar(fisheye_xy)
