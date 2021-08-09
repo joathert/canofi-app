@@ -50,11 +50,11 @@ The browser image loading is complicated by the fact that the embedded python co
 ## References and attributions
 A. Z. Andis Arietta (2020) Evaluation of hemispherical photos extracted from smartphone spherical panorama images to estimate canopy structure and forest light environment bioRxiv 2020.12.15.422956; doi: https://doi.org/10.1101/2020.12.15.422956
 
-Haozhou WANG, (2019), ESTIMATING FOREST ATTRIBUTES FROM SPHERICAL IMAGES, University of New Brunswick
-
 Hans ter Steege (2018). Hemiphot.R: Free R scripts to analyse hemispherical photographs for canopy openness, leaf area index and photosynthetic active radiation under forest canopies. Unpublished report. Naturalis Biodiversity Center, Leiden, The Netherlands 
 
-The reprojection code was helped along with this blog post:
+Haozhou WANG, (2019), ESTIMATING FOREST ATTRIBUTES FROM SPHERICAL IMAGES, University of New Brunswick
+
+The reprojection code was inspired by this blog post:
 http://www.richwareham.com/little-planet-projection/.
 
 
