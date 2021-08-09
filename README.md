@@ -15,7 +15,7 @@ The current focus of Canofi is on the estimation of the leaf area index (LAI) vi
 
 The use of panoramas means we can skip the expensive hardware that is usually used when collecting hemispherical imagery. Smartphone panoramas work just fine, especially when collected with the Google Street View app. 
 
-Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. The python code is embedded in the functions.js file [here](functions.js), and can be extracted (minus the convoluted i/o) if you want to run the code offline. 
+Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. The python code is embedded in the functions.js file [here](functions.js#L51) and [here](functions.js#L176), and can be extracted (minus the convoluted browser i/o) to run offline.
 
 ## Accuracy of algorithms
 Canofi performs 2 main steps: 
