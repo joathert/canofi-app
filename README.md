@@ -15,7 +15,7 @@ The current focus of Canofi is on the estimation of the leaf area index (LAI) vi
 
 The use of panoramas means we can skip the expensive hardware that is usually used when collecting hemispherical imagery. Smartphone panoramas work just fine, especially when collected with the Google Street View app. 
 
-Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. 
+Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which lets us run the scientific python stack within the browser. The python code is embedded in the functions.js file [here](functions.js), and can be extracted (minus the convoluted i/o) if you want to run the code offline. 
 
 ## Accuracy of algorithms
 Canofi performs 2 main steps: 
@@ -41,7 +41,7 @@ Note that data-sets 2 and 3 overlie each other, but both are plotted. This means
 At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang's Scipy Reprojection -> Hemiphot.R LAI_. This means that the skimage reprojection gives different results to the reference algorithm. Some of this decrease is accounted for by the lower resolution of the web image (see **More issues** below), but some of it is also due to differences in the interpolation codes themselves. Further work is needed to ascertain which re-projection method is most accurate. For this reason, **please do not (yet) use Canofi for important research** where maximum reprojection accuracy is required. 
 
 ## More issues  
-The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution. This artifically inflates the LAI value a little. Further, this convoluted step is not neccessary using standard python that you might want to run on a desktop.
+The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution. This decrease in resolution affects the computed LAI value a little. Further, this convoluted step is not neccessary using standard python + full resolution imagery that you might want to run on a desktop. 
 
 ## References
 A. Z. Andis Arietta (2020) Evaluation of hemispherical photos extracted from smartphone spherical panorama images to estimate canopy structure and forest light environment bioRxiv 2020.12.15.422956; doi: https://doi.org/10.1101/2020.12.15.422956
