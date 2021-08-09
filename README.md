@@ -13,16 +13,16 @@ info@cano.fi
 ## Canofi-app
 Canofi (rhymes with butterfly)  is an educational web-app that uses panoramic imagery to characterise plant canopy structure. 
 
-Canofi's focus is on the estimation of the leaf area index (LAI) via a hemispherical fish-eye type reprojection of input panorama data. You can read all about LAI on [wikipedia](https://en.wikipedia.org/wiki/Leaf_area_index) where there is also a decent introduction to [hemispherical photography](https://en.wikipedia.org/wiki/Hemispherical_photography). 
+Canofi's focus is on the estimation of the leaf area index (LAI) via a hemispherical fisheye type reprojection of input panorama data. You can read all about LAI on [wikipedia](https://en.wikipedia.org/wiki/Leaf_area_index) where there is also a decent introduction to [hemispherical photography](https://en.wikipedia.org/wiki/Hemispherical_photography). 
 
-The use of panoramas means we can skip the expensive hardware (e.g. DSLR + lens + levelling equipment) that is usually used to collect hemispherical imagery. Smartphone panoramas work just fine, especially when collected with the Google Street View app. The banner picture above illustrates the basic reprojection concept; the rectangular panoramic input data is on the left and the output fish-eye type image on the right. Once computed, the fish-eye image is segmented into sky and vegetation and used to derive structural parameters such as the LAI. 
+The use of panoramas means we can skip the expensive hardware (e.g. DSLR + lens + levelling equipment) that is usually used to collect hemispherical imagery. Smartphone panoramas work just fine, especially when collected with the Google Street View app. The banner picture above illustrates the basic reprojection concept; the rectangular panoramic input data is on the left and the output fisheye type image on the right. Once computed, the fisheye image is segmented into sky and vegetation and used to derive structural parameters such as the LAI. 
 
 Canofi is powered by the excellent [Pyodide](https://pyodide.org/en/stable/), which runs the scientific python stack within the browser. The python code used for the reprojection and LAI calculation is embedded in the functions.js file [here](functions.js#L51) and [here](functions.js#L176), and can be extracted (minus the convoluted browser image i/o) to run offline as a normal script.
 
 
 ## Accuracy of algorithms
 Canofi performs 2 main steps: 
-1. reprojection from panorama to fish-eye. 
+1. reprojection from panorama to fisheye. 
 2. LAI estimation.
 
 Both steps were checked for accuracy versus reference algorithms. This testing is only for validation of the algorithms used in Canofi versus
