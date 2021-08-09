@@ -6,10 +6,9 @@ https://app.cano.fi/
 
 https://www.cano.fi
 
-Canofi DOI: 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5171971.svg)](https://doi.org/10.5281/zenodo.5171971)
 
-Get in touch here: info@cano.fi
+info@cano.fi
 
 ## Canofi-app
 Canofi (rhymes with butterfly)  is an educational web-app that explores the use of panoramic imagery for plant science applications. 
