@@ -27,7 +27,7 @@ Canofi performs 2 main steps:
 
 Both steps were checked for accuracy versus reference algorithms. This testing is only for validation of the algorithms used in Canofi versus
 offline reference implementations. It does not test the validty of the reporjection method
-versus fisheye hardware, there are recent publications on that (e.g. [here](https://www.biorxiv.org/content/10.1101/2020.12.15.422956v2.full)).
+versus fisheye hardware, there are recent publications on that (e.g. [here](http://www.azandisresearch.com/wp-content/uploads/2021/07/cpab034.pdf)).
 
 Note that the reprojection step can be achieved with a whole bunch of different software including the Gimp, 
 ImageMagick, or a Scipy (interpolate.griddata) method used in Haozhou Wang’s thesis, which you can find [here](https://github.com/HowcanoeWang/Spherical2TreeAttributes). We use that as our reference reprojection code. As our LAI method was a line-by-line port of [Hemiphot.R](https://github.com/naturalis/Hemiphot), then we will use the R code as our reference LAI implementation.
@@ -47,7 +47,7 @@ At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang
 The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution. This decrease in resolution affects the computed LAI value a little. Further, this convoluted step is not neccessary using standard python + full resolution imagery that you might want to run on a desktop. 
 
 ## References and attributions
-A. Z. Andis Arietta (2020) Evaluation of hemispherical photos extracted from smartphone spherical panorama images to estimate canopy structure and forest light environment bioRxiv 2020.12.15.422956; doi: https://doi.org/10.1101/2020.12.15.422956
+A Z Andis Arietta (2021) Estimation of forest canopy structure and understory light using spherical panorama images from smartphone photography, Forestry: An International Journal of Forest Research;, cpab034, https://doi.org/10.1093/forestry/cpab034
 
 Hans ter Steege (2018). Hemiphot.R: Free R scripts to analyse hemispherical photographs for canopy openness, leaf area index and photosynthetic active radiation under forest canopies. Unpublished report. Naturalis Biodiversity Center, Leiden, The Netherlands 
 
