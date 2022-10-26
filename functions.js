@@ -229,7 +229,7 @@ function pyCalcLAI() {
                 wi = np.array([0.034, 0.104, 0.160, 0.218, 0.494])  
                 T = np.zeros(5)
     
-                for i in (-6,-5,-4,-3,2,1,0,1,2,3,4,5,6):
+                for i in (-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6):
                     angle_idx = angle + i - 1
                     T =  T + gap_fractions[angle_idx]
     
