@@ -43,7 +43,7 @@ Note that data-sets 2 and 3 overlie each other, but both are plotted. This means
 
 At High LAI, both 2 and 3 diverge from the reference values caculated with _Wang's Scipy Reprojection -> Hemiphot.R LAI_. This means that the skimage reprojection gives different results to the reference algorithm. Some of this difference is accounted for by the lower resolution of the web image (see **More issues** below), but some of it is also due to differences in the interpolation codes themselves. Further work is needed to ascertain which re-projection method is most accurate. For this reason, **please do not (yet) use Canofi for important research** where maximum reprojection accuracy is required. 
 
-Note that a bug was indentified in the LAI python routines in September 2022. See this [issue](https://github.com/joathert/canofi-app/issues/17#issue-1424290650).  
+Note that a bug was indentified in the LAI python routines in October 2022. See this [issue](https://github.com/joathert/canofi-app/issues/17#issue-1424290650).  
 
 ## More issues  
 The browser image loading is complicated by the fact that the embedded python code refused to work with jpeg files. That is why input image files are first sent to a canvas and re-read in as fixed sized png files at lower resolution. This decrease in resolution affects the computed LAI value a little. Further, this convoluted step is not neccessary using standard python + full resolution imagery that you might want to run on a desktop. 
