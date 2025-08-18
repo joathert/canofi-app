@@ -1,3 +1,8 @@
+## 🚫 Project Retired
+
+This site is no longer online (the domain has expired).  
+The source code is left here for reference/posterity.
+
 # Canofi: convert 360 panoramas to hemispherical imagery for plant science applications
 
 ![Alt text](attributes/corrected_banner.jpg?raw=true "Canofi")
